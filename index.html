@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Structure des dossiers – graphiques</title>
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --panel: #111318;
+      --text: #e7ecf3;
+      --muted: #a7b0bd;
+      --accent: #ffcc00; /* yellow for folder icon */
+      --link: #8dc1ff;
+      --border: #232733;
+      --blue: #27d3e3;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: radial-gradient(1200px 1200px at 10% -10%, #1a2130 0%, #0b0c0f 50%, #0b0c0f 100%);
+    }
+    .wrap { max-width: 980px; margin: 32px auto; padding: 0 16px; }
+    header { margin-bottom: 18px; }
+    h2 { font-weight: 700; font-size: clamp(22px, 3vw, 30px); margin: 0 0 6px; letter-spacing: .2px; }
+    h3 { color: var(--blue); margin: 6px 0 10px; }
+    p.sub { margin: 0; color: var(--muted); }
+
+    .tree { background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border: 1px solid var(--border); border-radius: 14px; padding: 8px 0; box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.02); }
+    details { padding-left: 18px; }
+    details > summary { list-style: none; cursor: pointer; padding: 10px 14px; display: grid; grid-template-columns: 1fr minmax(160px, 45%); gap: 16px; align-items: center; border-left: 2px solid transparent; border-radius: 10px; }
+    details[open] > summary { background: rgba(255,255,255,.02); border-left-color: #2a3344; }
+
+    summary::marker { display: none; }
+    summary .caret { width: 0; height: 0; border-left: 6px solid var(--muted); border-top: 5px solid transparent; border-bottom: 5px solid transparent; margin-right: 10px; transition: transform .2s ease; }
+    details[open] > summary .caret { transform: rotate(90deg); }
+
+    .row { display: contents; }
+    .name { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; }
+    .name a { color: var(--text); text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,.15); }
+    .name a:hover { color: var(--link); border-bottom-color: var(--link); }
+    .def { color: var(--muted); padding-right: 14px; }
+
+    .leaf { padding: 10px 14px 10px 42px; display: grid; grid-template-columns: 1fr minmax(160px, 45%); gap: 16px; align-items: center; }
+    .leaf:nth-child(odd) { background: rgba(255,255,255,.015); }
+
+    .icon { font-size: 18px; filter: drop-shadow(0 1px 0 rgba(0,0,0,.2)); }
+    .disabled { opacity: .6; cursor: default; border-bottom: none !important; }
+
+    footer { margin-top: 18px; color: var(--muted); font-size: 13px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .legend { display: inline-block; padding: 6px 10px; border: 1px solid var(--border); background: var(--panel); border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h2>Evaluation des programmes SM et d’EEQ dans les laboratoires médicaux du Togo</h2>
+      <h3>Structure des dossiers et liens de téléchargement des graphiques</h3>
+      <p class="sub">Cliquez sur les noms de dossiers pour ouvrir les liens.</p>
+    </header>
+
+    <section class="tree" aria-label="Arborescence des dossiers">
+      <!-- Root: graphiques -->
+      <details open>
+        <summary>
+          <span class="row">
+            <span class="name">
+              <span class="caret" aria-hidden="true"></span>
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/WSZVmaDI#E3LgO1TbKpGWMu-e3j-hkA" target="_blank" rel="noopener">graphiques</a>
+            </span>
+            <span class="def">Dossier racine</span>
+          </span>
+        </summary>
+
+        <!-- eeq -->
+        <details>
+          <summary>
+            <span class="row">
+              <span class="name">
+                <span class="caret" aria-hidden="true"></span>
+                <span class="icon" aria-hidden="true">📂</span>
+                <a href="https://mega.nz/folder/SCRwhC5B#06OLaTAtqD8bMQunO5wINA" target="_blank" rel="noopener">eeq</a>
+              </span>
+              <span class="def">Dossiers sur l'EEQ</span>
+            </span>
+          </summary>
+
+          <!-- couverture_traceurs_biochim (mapping: couveture_...) -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/ne5whJQS#Fz94mQhNeGS-_5wodW2aFQ" target="_blank" rel="noopener">couverture_traceurs_biochim</a>
+            </span>
+            <span class="def">Evolution de la couverture en EEQ des examens traceurs en Biochimie par campagne</span>
+          </div>
+
+          <!-- couverture_traceurs_hemato (mapping: couveture_...) -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/7GolTBTZ#vpp1QmJag7tS67mJOO5n9w" target="_blank" rel="noopener">couverture_traceurs_hemato</a>
+            </span>
+            <span class="def">Evolution de la couverture en EEQ des examens traceurs en Hématologie</span>
+          </div>
+
+          <!-- couverture_pma_biochim -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/uWJHVDQL#F-d1lOz171fO0YzIiK8FMg" target="_blank" rel="noopener">couverture_pma_biochim</a>
+            </span>
+            <span class="def">Evolution de la couverture en EEQ des examens du PMA en Biochimie par campagne</span>
+          </div>
+
+          <!-- couverture_pma_hemato (no link in mapping) -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <span class="disabled" title="Aucun lien fourni">couverture_pma_hemato</span>
+            </span>
+            <span class="def">Evolution de la couverture en EEQ des examens du PMA en Hématologie</span>
+          </div>
+
+          <!-- performance_global_biochim -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/qHBDWArK#4Wws34ke8rmot3syaO5ysA" target="_blank" rel="noopener">performance_global_biochim</a>
+            </span>
+            <span class="def">Evolution des performances EEQ des examens traceurs de Biochimie</span>
+          </div>
+
+          <!-- performance_global_hemato -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/DWh1WTQT#6L9jxcpQzwW_rutc4GxTnw" target="_blank" rel="noopener">performance_global_hemato</a>
+            </span>
+            <span class="def">Evolution des performances EEQ des examens traceurs d'Hématologie</span>
+          </div>
+
+          <!-- performance_biochim_param -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/SORDHAKC#PkUCblZqXSnkAhonsEE1-A" target="_blank" rel="noopener">performance_biochim_param</a>
+            </span>
+            <span class="def">Evolution des performances EEQ des examens traceurs en Biochimie par paramètre</span>
+          </div>
+
+          <!-- performance_hemato_param -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/aPAkRSCa#8b-6Fl8HsdzujfB1b1IzqA" target="_blank" rel="noopener">performance_hemato_param</a>
+            </span>
+            <span class="def">Evolution des performances EEQ des examens traceurs en Hématologie  par paramètre</span>
+          </div>
+
+        </details>
+
+        <!-- sm -->
+        <details>
+          <summary>
+            <span class="row">
+              <span class="name">
+                <span class="caret" aria-hidden="true"></span>
+                <span class="icon" aria-hidden="true">📂</span>
+                <a href="https://mega.nz/folder/KL4CwQKB#_Lw7lmjhcPD1AAwZTB5SQ" target="_blank" rel="noopener">sm</a>
+              </span>
+              <span class="def">Dossier sur le SM</span>
+            </span>
+          </summary>
+
+          <!-- performance_audits_globale -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/iHBEDJqL#pz6rKc4PY2_ukLVAd2m0BQ" target="_blank" rel="noopener">performance_audits_globale</a>
+            </span>
+            <span class="def">Evolution de la performance globale des audits</span>
+          </div>
+
+          <!-- performance_audits_sections -->
+          <div class="leaf">
+            <span class="name">
+              <span class="icon" aria-hidden="true">📂</span>
+              <a href="https://mega.nz/folder/TTphUZQK#7dCDEYNaLBjc-aOhFSpVBw" target="_blank" rel="noopener">performance_audits_sections</a>
+            </span>
+            <span class="def">Evolution de la performance des audits par section</span>
+          </div>
+        </details>
+
+      </details>
+    </section>
+
+    <footer>
+      <span class="legend">Structure • Définition • Lien intégré dans le nom du dossier</span>
+	  <span class="legend">© Dègninou YEHADJI, Tel: 93 70 05 00</span>
+    </footer>
+  </div>
+</body>
+</html>
